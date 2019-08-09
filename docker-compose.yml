@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+#  tf-serving-service:
+#    build: ./tf-serving
+#    volumes:
+#      - ./tf-serving/exports:/model
+#    ports:
+#      - 5002:8500
+  rest-service:
+    build: ./rest-service
+    volumes:
+      - ./rest-service:/usr/src/app
+    ports:
+      - 5002:80
+#    depends_on:
+#      - tf-serving-service
+#
+  ui:
+    image: nginx
+    volumes:
+      - ./ui:/usr/share/nginx/html
+    ports:
+      - 5000:80
+#    depends_on:
+#      - rest-service
+
+#  ui:
+#    image: httpd:2.4
+#    volumes:
+#      - ./ui:/usr/local/apache2/htdocs/
+#    ports:
+#      - 5000:80
+#    depends_on:
+#      - rest-service

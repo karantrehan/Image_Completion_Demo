@@ -1,0 +1,104 @@
+.jumbotron{
+	background-color: #563d7c;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    color:#fff;
+	/*background-image: url("../images/header_image.png");*/
+	/*background-size: 50% 100%;*/
+	/*background-repeat: no-repeat;*/
+	/*float: right;*/
+	padding: 0rem 0rem;
+}
+img{
+  max-width:180px;
+}
+.columns{
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+#uploadImage{
+	padding-right: 10px;
+	padding-left: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#uploadImage1{
+	padding-right: 10px;
+	padding-left: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#uploadImage2{
+	padding-right: 10px;
+	padding-left: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input[type=file]{
+	padding:5px;
+	margin-right: 5px;
+	background:#2d2d2d;
+	color:#fff;
+}
+#imageContainerModal{
+	float:left;
+}
+
+.result_container{
+	float:right;
+}
+.result_container h3{
+	text-transform: uppercase;
+}
+
+/* Styling the ouput */
+#codeLabel{
+	padding-right: 10px;
+	padding-left: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 20px;
+}
+#resultTextArea{
+	resize: none;
+	margin: 0px 10px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.output{
+	display: none;
+}
+@media all and (min-width: 768px) {
+	#uploadImage,#uploadImage1,#uploadImage2,#imgSnap,#imgSnap1,#imgSnap2{
+		vertical-align: middle;
+		line-height: initial;
+	}
+	.columns{
+		line-height: 180px;
+	}
+	#resultTextArea{
+		width: 700px;
+	}
+}
+#captureTitle{
+	margin:20px;
+}
+#capture{
+	margin:20px;
+}
+#video{
+	display: none;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+#footer{
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+	margin-left: 190px;
+	font-family: "Arial Rounded MT Bold";
+}
+
+footer{
+	position: static;
+    bottom: 30px;
+    width: 100%;
+	margin-left: 190px;
+	font-family: "Arial Rounded MT Bold";
+}

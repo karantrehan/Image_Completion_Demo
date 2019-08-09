@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Image Completion</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CDN File for Bootstrap Demo -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- -->
+
+  <!-- Local Files -->
+  <link rel="stylesheet" href="css/style.css" media="all">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+  <script src="js/master.js"></script>
+  <!-- -->
+</head>
+
+<body>
+<header>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 style="margin-top: 50px; margin-left: 20px">Image Completion Demo</h1>
+        </div>
+        <div class="col-md-6">
+          <img src="images/header_image.jpg" style="max-width: 600px"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <h4>Download Sample Image and Mask</h4>
+  <a href="images/image.png" download>
+    <button type="button" class="btn btn-dark" id="download1">Download Image</button>
+  </a>
+  <a href="images/mask.png" download>
+    <button type="button" class="btn btn-dark" id="download2">Download Mask</button>
+  </a>
+</div>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div >
+        <img id="imageContainer1" src="images/180.png" alt="your image"  />
+      </div>
+      <br>
+      <div >
+        <label id="uploadImage1">Upload Image</label>
+        <input id="imgSnap1" type='file'/>
+
+      </div>
+    </div>
+      <div class="col-md-6">
+        <div >
+          <img id="imageContainer2" src="images/180.png" alt="your image" />
+        </div>
+        <br>
+        <div >
+          <label id="uploadImage2">Upload Mask</label>
+          <input id="imgSnap2" type='file' />
+
+        </div>
+      </div>
+    </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="row" >
+      <div class="offset-3 offset-sm-3 offset-md-0 ui-icon-arrow-1-ne">
+
+        <h4 >Download Completed Image </h4>
+        <h6>(Rescaled to 256*256 due to trained-model constraints)</h6>
+        <br>
+
+        <button type="button" class="btn btn-dark" id="download">Download</button>
+        <br>
+        <br>
+        <div id="downloadText"></div>
+        </a>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <br>
+  <br>
+
+<footer>NOTE: This service is for demo purpose only, the underlying model has been trained only on 12 images,
+  hence results can't be compared to those in the Research Paper.</footer>
+</body>
+</html>
