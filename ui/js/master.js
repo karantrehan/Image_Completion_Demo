@@ -57,7 +57,7 @@ window.addEventListener('load', () => {
 				a.style.display = 'none';
 				document.body.appendChild(a);
 				a.click();
-				$("#donwloadText").text('Download Complete')
+				$("#downloadText").text('Download Complete')
 			}
 		};
 		// Post data to URL which handles post request
