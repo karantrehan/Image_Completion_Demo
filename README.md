@@ -26,5 +26,5 @@ ______________________________________
 
 
 ###### Note:
-This service is for demo purpose only, the underlying model has been trained only on 12 images, hence results can't be compared to those in the Research Paper
+This service is for demo purpose only, the underlying model hasn't been trained fully, hence results can't be compared to those in the Research Paper
 
