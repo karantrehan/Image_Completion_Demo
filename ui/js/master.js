@@ -65,15 +65,24 @@ window.addEventListener('load', () => {
 		xhttp.setRequestHeader("Content-Type", "application/json");
 		// You should set responseType as blob for binary responses
 		xhttp.responseType = 'blob';
-		xhttp.send(content);
-		$("#downloadText").text('Please wait... Image processing and downloading may take a few seconds')
-		document.querySelector('#imageContainer1').setAttribute('src', "images/180.png");
-		document.querySelector('#imageContainer2').setAttribute('src', "images/180.png");
-		$('#imgSnap1').val('')
-		$('#imgSnap2').val('')
-		console.log(content)
-		delete(content)
-		obj.files = []
+		if (obj.files[0] && obj.files[1] ) {
+            xhttp.send(content);
+            $("#downloadText").css('color', 'black');
+            $("#downloadText").text('Please wait... Image processing and downloading may take a few seconds')
+			document.querySelector('#imageContainer1').setAttribute('src', "images/180.png");
+			document.querySelector('#imageContainer2').setAttribute('src', "images/180.png");
+			$('#imgSnap1').val('')
+			$('#imgSnap2').val('')
+			console.log(content)
+			delete(content)
+			obj.files = []
+        }
+        else {
+        	$("#downloadText").css('color', 'red');
+        	$("#downloadText").text('Please select both image and mask first')
+        	// $("#downloadText").fontcolor('#fff')
+		}
+
 		}
 );
 

@@ -87,6 +87,9 @@ input[type=file]{
 	margin-bottom: 50px;
 }
 
+#downloadText{
+}
+
 #footer{
     position: fixed;
     bottom: 30px;

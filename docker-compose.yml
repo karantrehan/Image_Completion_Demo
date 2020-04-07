@@ -9,6 +9,7 @@ services:
 #      - 5002:8500
   rest-service:
     build: ./rest-service
+    restart: always
     volumes:
       - ./rest-service:/usr/src/app
     ports:
