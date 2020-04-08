@@ -45,27 +45,12 @@ window.addEventListener('load', () => {
 
 		// Use XMLHttpRequest instead of Jquery $ajax
 		xhttp = new XMLHttpRequest();
-
-		xhttp.onreadystatechange = function() {
-			var a;
-			if (xhttp.readyState === 4 && xhttp.status === 200) {
-				// Trick for making downloadable link
-				a = document.createElement('a');
-				a.href = window.URL.createObjectURL(xhttp.response);
-				// Give filename you wish to download
-				a.download = "image_result.jpg";
-				a.style.display = 'none';
-				document.body.appendChild(a);
-				a.click();
-				$("#downloadText").text('Download Complete')
-			}
-		};
 		// Post data to URL which handles post request
-		xhttp.open("POST", 'http://localhost:5002/api');
+		xhttp.open("POST", window.location.protocol+'//'+window.location.hostname+':5002/api');
 		xhttp.setRequestHeader("Content-Type", "application/json");
 		// You should set responseType as blob for binary responses
 		xhttp.responseType = 'blob';
-		if (obj.files[0] && obj.files[1] ) {
+		if (obj.files[0] && obj.files[1]) {
             xhttp.send(content);
             $("#downloadText").css('color', 'black');
             $("#downloadText").text('Please wait... Image processing and downloading may take a few seconds')
@@ -78,13 +63,32 @@ window.addEventListener('load', () => {
 			obj.files = []
         }
         else {
-        	$("#downloadText").css('color', 'red');
-        	$("#downloadText").text('Please select both image and mask first')
+        	// $("#downloadText").css('color', 'red');
+        	alert('Please select both image and mask first');
+    		// document.write("Welcome to C# Corner - " + test);
+        	// $("#downloadText").text('Please select both image and mask first')
         	// $("#downloadText").fontcolor('#fff')
 		}
 
+		xhttp.onreadystatechange = function() {
+			var a;
+			if (xhttp.readyState === 4 && xhttp.status === 200) {
+				// Trick for making downloadable link
+				a = document.createElement('a');
+				a.href = window.URL.createObjectURL(xhttp.response);
+				// Give filename you wish to download
+				a.download = "image_result.jpg";
+				a.style.display = 'none';
+				document.body.appendChild(a);
+				a.click();
+
+				$("#downloadText").text('')
+				// setTimeout(1000)
+				setTimeout(() => {  alert('Download Complete') }, 10);
+
+			}
 		}
-);
+	});
 
 })
 
