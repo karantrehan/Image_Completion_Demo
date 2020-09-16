@@ -15,7 +15,7 @@ ______________________________________
 Please go to the link mentioned below for an online web service which demonstrates this implementation.
 
 #####
-<http://inpaint.online>
+167.99.122.4:80
 
 ##
 
