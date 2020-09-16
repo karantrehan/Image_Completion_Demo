@@ -15,7 +15,7 @@ ______________________________________
 Please go to the link mentioned below for an online web service which demonstrates this implementation.
 
 #####
-<167.99.122.4:80>
+[inpaint.online](http://167.99.122.4:80)
 
 ##
 
