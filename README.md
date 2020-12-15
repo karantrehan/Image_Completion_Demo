@@ -21,7 +21,7 @@ Please go to the link mentioned below for an online web service which demonstrat
 
 Source Code for model training can be found at below mentioned link.
 
-<https://github.com/karantrehan/Image_Completion>
+<https://github.com/karantrehan/Image_Completion_Experiment>
 ______________________________________
 
 
